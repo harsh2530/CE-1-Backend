@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <h2>ShopEase<span>.</span></h2>
+    <a href="#cart">🛒 Cart (<b id="count">0</b>)</a>
+</header>
+
+<section class="hero">
+    <p>YOUR STYLE, YOUR CHOICE</p>
+    <h1>Shop Smarter. <span>Live Better.</span></h1>
+    <p>Discover your favourite products at amazing prices.</p>
+</section>
+
+<main>
+    <section>
+        <h2>Explore Products</h2>
+
+        <div class="filters">
+            <input id="search" placeholder="🔍 Search products">
+            <select id="category">
+                <option value="All">All Categories</option>
+                <option>Electronics</option>
+                <option>Fashion</option>
+                <option>Home</option>
+            </select>
+            <select id="sort">
+                <option value="default">Featured</option>
+                <option value="low">Price: Low to High</option>
+                <option value="high">Price: High to Low</option>
+            </select>
+        </div>
+
+        <div id="products" class="products"></div>
+    </section>
+
+    <aside id="cart">
+        <h2>🛍️ Your Cart</h2>
+        <div id="items">Your cart is empty.</div>
+
+        <hr>
+        <p>Subtotal <b id="subtotal">₹0</b></p>
+        <p>Discount <b id="discount">₹0</b></p>
+        <p>Delivery <b id="delivery">₹0</b></p>
+        <h3>Total <span id="total">₹0</span></h3>
+
+        <div class="coupon">
+            <input id="code" placeholder="SAVE10">
+            <button id="apply">Apply</button>
+        </div>
+        <p id="message"></p>
+
+        <button id="checkout" class="checkout">Proceed to Checkout →</button>
+        <small>🔒 Safe & secure demo checkout</small>
+    </aside>
+</main>
+
+<div id="modal" class="modal">
+    <div class="checkout-box">
+        <button id="close" class="close">×</button>
+        <div class="check">✓</div>
+        <h2>Checkout</h2>
+        <p>Review your order before confirming.</p>
+
+        <div id="summary"></div>
+
+        <h3>Shipping Details</h3>
+        <input id="customer" placeholder="Full Name">
+        <input id="address" placeholder="Delivery Address">
+        <select id="payment">
+            <option value="COD">Cash on Delivery</option>
+            <option value="UPI">UPI (Demo Only)</option>
+        </select>
+
+        <button id="place" class="checkout">Place Demo Order</button>
+        <small>No real payment will be processed.</small>
+    </div>
+</div>
+
+<footer>© 2026 ShopEase | E-Commerce Mini Project</footer>
+
+</body>
+</html>
